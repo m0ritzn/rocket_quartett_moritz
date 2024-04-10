@@ -6,33 +6,33 @@ $(document).ready(function () {
         <div class="card-content">
             <div class="card-number">${rocket.group_letter}${rocket.number}</div>
             <div class="card-title">
-                <div class="card-name">Voyager 1</div>
-                <div class="card-group">Probes</div>
+                <div class="card-name">${rocket.name}</div>
+                <div class="card-group">${rocket.group}</div>
             </div>
     
             <div class="rocket-image">
                 <img src="images/voyager.webp" alt="Voyager 1">
             </div>
             <div class="goal-icon">Goal</div>
-            <div class="rocket-info">Solar system exploration</div>
+            <div class="rocket-info">${rocket.mission_goal}</div>
     
             <div class="stat-icon">year built</div>
-            <div class="stat-value">1977</div>
+            <div class="stat-value">${rocket.year_built}</div>
     
             <div class="stat-icon">mission duration</div>
-            <div class="stat-value">19000</div>
+            <div class="stat-value">${rocket.mission_duration}</div>
     
             <div class="stat-icon">max speed</div>
-            <div class="stat-value">62000</div>
+            <div class="stat-value">${rocket.max_speed}</div>
     
             <div class="stat-icon">max earth distance</div>
-            <div class="stat-value">22286000</div>
+            <div class="stat-value">${rocket.max_earth_distance}</div>
     
             <div class="stat-icon">development cost</div>
-            <div class="stat-value">250</div>
+            <div class="stat-value">${rocket.development_cost}</div>
     
             <div class="stat-icon">weight</div>
-            <div class="stat-value">773</div>
+            <div class="stat-value">${rocket.weight}</div>
     
         </div>
     </div>`);

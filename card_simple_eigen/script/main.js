@@ -6,7 +6,8 @@ $(document).ready(function () {
         <div class="card-content">
             <div class="card-number">${rocket.group_letter}${rocket.number}</div>
             <div class="card-title">
-                <div class="card-name">Voyager 1</div>
+                // <div class="card-name">Voyager 1</div>
+                <div class="card-name">${rocket.name}</div>
                 <div class="card-group">Probes</div>
             </div>
     
