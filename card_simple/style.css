@@ -28,8 +28,15 @@ body {
     grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr;
 }
 
+.card-number {
+    border-style: none none dashed none;
+
+}
+
 .card-title {
     grid-column: span 3;
+    /* border: 3px dashed #222; */
+    border-style: none none dashed dashed;
 }
 
 .rocket-image {
