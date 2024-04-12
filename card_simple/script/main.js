@@ -1,17 +1,19 @@
 $(document).ready(function () {
     const wrapper = $('#wrapper');
-    rocketData.forEach(rocket => {
-        const card =
-            $(`<div class="card">
-        <div class="card-content">
-            <div class="card-number">${rocket.group_letter}${rocket.number}</div>
-            <div class="card-title">
-                <div class="card-name">${rocket.name}</div>
-                <div class="card-group">${rocket.group}</div>
-            </div>
+    const imagePaths = ["images/falcon_heavy.jpeg","images/saturn_v.jpeg", "images/ariane_5.jpeg", "images/long_march_5.jpeg"];
     
-            <div class="rocket-image">
-                <img src="images/voyager.webp" alt="Voyager 1">
+    rocketData.forEach((rocket, index) => {
+        const card =
+        $(`<div class="card">
+        <div class="card-content">
+        <div class="card-number">${rocket.group_letter}${rocket.number}</div>
+        <div class="card-title">
+        <div class="card-name">${rocket.name}</div>
+        <div class="card-group">${rocket.group}</div>
+        </div>
+        
+        <div class="rocket-image">
+            <img src="${imagePaths[index]}" alt="${rocket.name}">
             </div>
             <div class="goal-icon">Goal</div>
             <div class="rocket-info">${rocket.mission_goal}</div>
