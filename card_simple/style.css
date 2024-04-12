@@ -53,4 +53,17 @@ body {
 
 .rocket-info {
     grid-column: span 3;
+    border-style: dashed none dashed none;
+}
+
+.goal-icon {
+    border-style: dashed dashed dashed none;
+}
+
+.stat-icon {
+    border-style: dashed;
+}
+
+.stat-value {
+    border-style: dashed;
 }
