@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(BebasNeue-Regular.woff2) format('woff2');
+  }
+
+  /* @font-face {
+    font-family: 'FAMILY_NAME';
+    font-style: NORMAL_OR_ITALIC;
+    font-weight: NUMERIC_WEIGHT_VALUE;
+    src: url(FONT_FILE_NAME.woff2) format('woff2');
+  } */
+
+/* @font-face {
+    font-family: 'Fira Sans';
+    src: url('FiraSans-Regular.woff2') format('woff2'),
+        url('FiraSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */

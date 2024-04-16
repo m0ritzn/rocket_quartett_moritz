@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; */
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -11,9 +12,9 @@ body {
 #wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 4%; /* Abstand zwischen den Karten als Prozentsatz der Containerbreite */
-    max-width: calc(4 * (250px + (4%))); /* Maximalbreite für vier Karten nebeneinander mit Abstand */
-    margin: 0 auto; /* Zentrieren des Grid-Containers */
+    gap: 2%; 
+    max-width: calc(4 * (250px + (4%))); 
+    margin: 0 auto; 
 }
 
 .card {
@@ -50,7 +51,6 @@ body {
     background-color: #A65424;
     color: white;
     border-radius: 0 10px 0 0;
-    /* padding-top: 1%; */
     padding: 5px;
     /* color: white; */
     /* border: 3px dashed #222; */
@@ -60,6 +60,7 @@ body {
 .card-name {
     font-size: large;
     color: white;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .card-group {
@@ -103,8 +104,8 @@ body {
 .stat-icon {
     border-style: none none solid none;
     display: flex;
-    justify-content: center; /* Horizontales Zentrieren des Inhalts */
-    align-items: center; /* Vertikales Zentrieren des Inhalts */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .stat-icon img {
@@ -115,8 +116,8 @@ body {
 .stat-value {
     border-style: none none solid none;
     display: flex;
-    justify-content: left; /* Horizontales Zentrieren des Inhalts */
-    align-items: center; /* Vertikales Zentrieren des Inhalts */
+    justify-content: left; 
+    align-items: center; 
 }
 
 /* Media Query für maximale Breite von vier Karten nebeneinander */
