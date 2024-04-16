@@ -9,6 +9,11 @@ body {
 }
 
 #wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 4%; /* Abstand zwischen den Karten als Prozentsatz der Containerbreite */
+    max-width: calc(4 * (250px + (4%))); /* Maximalbreite für vier Karten nebeneinander mit Abstand */
+    margin: 0 auto; /* Zentrieren des Grid-Containers */
 }
 
 .card {
@@ -112,4 +117,25 @@ body {
     display: flex;
     justify-content: left; /* Horizontales Zentrieren des Inhalts */
     align-items: center; /* Vertikales Zentrieren des Inhalts */
+}
+
+/* Media Query für maximale Breite von vier Karten nebeneinander */
+@media screen and (max-width: 1200px) {
+    #wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Media Query für maximale Breite von drei Karten nebeneinander */
+@media screen and (max-width: 900px) {
+    #wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media Query für maximale Breite von zwei Karten nebeneinander */
+@media screen and (max-width: 600px) {
+    #wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
