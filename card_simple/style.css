@@ -60,8 +60,24 @@ body {
     border-style: dashed dashed dashed none;
 }
 
+/* .goal-icon img {
+
+} */
+
 .stat-icon {
     border-style: dashed;
+    /* width: auto;
+    height: auto; */
+}
+
+.stat-icon img {
+    /* max-width: 200%;
+    max-height: 200%; */
+    width: 35px;
+    height: 35px;
+    /* object-position: center;
+    object-fit: cover */
+
 }
 
 .stat-value {
