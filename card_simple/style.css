@@ -17,6 +17,7 @@ body {
     background-color: rgb(255, 255, 240);
     border-radius: 15px;
     padding: 12px;
+    margin-bottom: 15px;
 }
 
 .card-content {
@@ -44,7 +45,8 @@ body {
     background-color: #A65424;
     color: white;
     border-radius: 0 10px 0 0;
-    padding-top: 1%;
+    /* padding-top: 1%; */
+    padding: 5px;
     /* color: white; */
     /* border: 3px dashed #222; */
     /* border-style: none none dashed dashed; */
@@ -69,6 +71,7 @@ body {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    border-radius: 0 0 10px 10px;
 }
 
 .rocket-info {
