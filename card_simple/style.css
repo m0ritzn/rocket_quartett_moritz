@@ -20,7 +20,7 @@ body {
 }
 
 .card-content {
-    border: 3px solid #222;
+    /* border: 3px solid #222; */
     height: 100%;
     border-radius: 10px;
     display: grid;
@@ -29,16 +29,34 @@ body {
 }
 
 .card-number {
-    border-style: none none dashed none;
+    /* border-style: none none dashed none; */
     display: flex;
-    justify-content: center; /* Horizontales Zentrieren des Inhalts */
+    justify-content: center ; /* Horizontales Zentrieren des Inhalts */
     align-items: center; /* Vertikales Zentrieren des Inhalts */
+    background-color: #A65424;
+    color: white;
+    font-size: x-large;
+    border-radius: 10px 0 0 0;
 }
 
 .card-title {
     grid-column: span 3;
+    background-color: #A65424;
+    color: white;
+    border-radius: 0 10px 0 0;
+    padding-top: 1%;
+    /* color: white; */
     /* border: 3px dashed #222; */
-    border-style: none none dashed dashed;
+    /* border-style: none none dashed dashed; */
+}
+
+.card-name {
+    font-size: large;
+    color: white;
+}
+
+.card-group {
+    font-size: small;
 }
 
 .rocket-image {
@@ -56,36 +74,38 @@ body {
 .rocket-info {
     grid-column: span 3;
     display: flex;
-    justify-content: left; /* Horizontales Zentrieren des Inhalts */
-    align-items: center; /* Vertikales Zentrieren des Inhalts */
+    justify-content: left; 
+    align-items: center;
+    border-style: none none solid none;
 }
 
 .goal-icon {
-    border-style: dashed dashed dashed none;
+    /* border-style: dashed dashed dashed none; */
     display: flex;
     justify-content: center;
     align-items: center; 
+    border-style: none none solid none;
 }
 
 .goal-icon img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 
 .stat-icon {
-    border-style: dashed;
+    border-style: none none solid none;
     display: flex;
     justify-content: center; /* Horizontales Zentrieren des Inhalts */
     align-items: center; /* Vertikales Zentrieren des Inhalts */
 }
 
 .stat-icon img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 
 .stat-value {
-    border-style: dashed;
+    border-style: none none solid none;
     display: flex;
     justify-content: left; /* Horizontales Zentrieren des Inhalts */
     align-items: center; /* Vertikales Zentrieren des Inhalts */
