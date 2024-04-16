@@ -30,7 +30,9 @@ body {
 
 .card-number {
     border-style: none none dashed none;
-
+    display: flex;
+    justify-content: center; /* Horizontales Zentrieren des Inhalts */
+    align-items: center; /* Vertikales Zentrieren des Inhalts */
 }
 
 .card-title {
@@ -53,33 +55,38 @@ body {
 
 .rocket-info {
     grid-column: span 3;
-    border-style: dashed none dashed none;
+    display: flex;
+    justify-content: left; /* Horizontales Zentrieren des Inhalts */
+    align-items: center; /* Vertikales Zentrieren des Inhalts */
 }
 
 .goal-icon {
     border-style: dashed dashed dashed none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-/* .goal-icon img {
-
-} */
+.goal-icon img {
+    width: 35px;
+    height: 35px;
+}
 
 .stat-icon {
     border-style: dashed;
-    /* width: auto;
-    height: auto; */
+    display: flex;
+    justify-content: center; /* Horizontales Zentrieren des Inhalts */
+    align-items: center; /* Vertikales Zentrieren des Inhalts */
 }
 
 .stat-icon img {
-    /* max-width: 200%;
-    max-height: 200%; */
     width: 35px;
     height: 35px;
-    /* object-position: center;
-    object-fit: cover */
-
 }
 
 .stat-value {
     border-style: dashed;
+    display: flex;
+    justify-content: left; /* Horizontales Zentrieren des Inhalts */
+    align-items: center; /* Vertikales Zentrieren des Inhalts */
 }

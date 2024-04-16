@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const wrapper = $('#wrapper');
-    const imagePaths = ["images/falcon_heavy.jpeg", "images/saturn_v.jpeg", "images/ariane_5.jpeg", "images/long_march_5.jpeg"];
+    const imagePaths = ["images/falcon_heavy.jpeg", "images/saturn_v.jpeg", "images/ariane_5.jpeg", "images/falcon_heavy.jpeg", "images/electron.jpeg", "images/vega.jpeg", "images/falcon_1.webp", "images/pegasus.jpeg", "images/voyager_1.jpeg", "images/dart.jpeg", "images/new_horizons.webp", "images/juno.jpeg", "images/hubble.jpeg", "images/jwst.jpeg", "images/kepler.jpeg", "images/gps.jpeg", "images/curiosity.jpeg", "images/perseverance.webp", "images/zhurong.png", "images/opportunity.jpeg", "images/insight.jpeg", "images/change_4.png", "images/venera_10.jpeg", "images/hayabusa_2.webp", "images/iss.jpeg", "images/tiangong.jpeg", "images/mir.jpeg", "images/skylab.jpeg", "images/crew_dragon.webp", "images/apollo.jpeg", "images/space_shuttle.webp", "images/soyuz.webp"];
 
     rocketData.forEach((rocket, index) => {
         const card =
