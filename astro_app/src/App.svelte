@@ -1,30 +1,10 @@
 <script>
   import Navbar from "./components/Navbar.svelte";
-
-  import { onMount } from "svelte";
-
-  let data;
-
-  async function fetchData() {
-    try {
-      const response = await fetch(
-        // `/api/rest/v1/satellite/above/48/9/0/10/0/&apiKey=${import.meta.env.VITE_API_KEY}`,
-        `/api/rest/v1/satellite/above/48/9/0/10/0/&apiKey=H5W4P7-C4NVAN-VVAXWF-59LC`,
-      );
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      data = await response.json();
-      console.log(data); // Print the data to the console
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
-
-  onMount(() => {
-    fetchData();
-  });
+  import SpaceObject from "./components/SpaceObject.svelte";
+  import data from "./components/SpaceObject.svelte";
 </script>
+
+<SpaceObject {data} />
 
 <!-- {#if data}
   <ul>
