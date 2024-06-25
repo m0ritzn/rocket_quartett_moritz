@@ -1,6 +1,11 @@
 <!-- Satellite.svelte -->
 <script>
     export let satellite;
+
+    // Generiere zufällige Positionen
+    // Generiere zufällige Positionen für die Punkte
+    let top = Math.random() * 100 + "%";
+    let left = Math.random() * 100 + "%";
 </script>
 
 <!-- <div>
@@ -16,7 +21,7 @@
 
 <!-- <div class="dot" title={satellite.satname}></div> -->
 
-<div class="dot">
+<div class="dot" style="top: {top}; left: {left};">
     <div class="tooltip">
         <h3>{satellite.satname}</h3>
         <p>satname: {satellite.satname}</p>
@@ -35,9 +40,7 @@
         width: 10px;
         background-color: red;
         border-radius: 50%;
-        display: inline-block;
-        margin: 2px;
-        position: relative;
+        position: absolute; /* Absolute Positionierung innerhalb des Containers */
     }
 
     .tooltip {
