@@ -4,23 +4,6 @@
 
     let data;
 
-    // async function fetchData() {
-    //     try {
-    //         const response = await fetch(
-    //             // API-Link mit .env-Datei fixen
-    //             `https://api.n2yo.com/rest/v1/satellite/above/48/9/0/10/0/&apiKey=H5W4P7-C4NVAN-VVAXWF-59LC`,
-    //         );
-    //         if (!response.ok) {
-    //             throw new Error(`HTTP error! Status: ${response.status}`);
-    //         }
-    //         data = await response.json();
-    //         satelliteStore.set(data.above || []); // Speichere die Daten im Store
-    //         console.log(data);
-    //     } catch (error) {
-    //         console.error("Error fetching data:", error);
-    //     }
-    // }
-
     async function fetchData() {
         try {
             const response = await fetch(
@@ -42,7 +25,7 @@
     });
 </script>
 
-{#if $satelliteStore.length === 0}
+<!-- {#if $satelliteStore.length === 0}
     <p>Loading...</p>
 {:else}
     <ul>
@@ -50,4 +33,4 @@
             <li>{satellite.satname}</li>
         {/each}
     </ul>
-{/if}
+{/if} -->
