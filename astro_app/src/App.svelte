@@ -1,31 +1,24 @@
 <script>
   import Navbar from "./components/Navbar.svelte";
-  import SpaceObject from "./components/SpaceObject.svelte";
-  import data from "./components/SpaceObject.svelte";
+  import SpaceObjects from "./components/SpaceObjects.svelte";
+  import { satelliteStore } from "./store.js";
+  // import data from "./components/SpaceObjects.svelte";
+  // import satellite from "./components/SpaceObject.svelte";
+
+  // Daten hier aus API Laden
+  $: console.log($satelliteStore);
 </script>
 
-<SpaceObject {data} />
-
-<!-- {#if data}
-  <ul>
-    {#each data.above as satellite}
-      <li>{satellite.satname}</li>
-    {/each}
-  </ul>
-{:else}
-  <p>Loading...</p>
-{/if} -->
+<!-- <SpaceObject {data} /> -->
 
 <main>
   <Navbar />
-  <!-- <section id="visualisierung">
-    <h2>Visualisierung</h2>
-
-  </section>
-  <section id="tabelle">
-    <h2>Tabelle</h2>
-
-  </section> -->
+  <SpaceObjects />
+  <!-- <ul>
+    {#each $satelliteStore as satellite}
+      <li>{satellite.satname}</li>
+    {/each}
+  </ul> -->
 </main>
 
 <style>
