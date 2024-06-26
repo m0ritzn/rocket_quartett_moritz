@@ -20,20 +20,13 @@
 </body>
 
 <style>
-    :global(body) {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #1c1c2d;
-        color: white;
-    }
-
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1em 2em;
-        background-color: #1c1c2d;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* background-color: #1c1c2d; */
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     }
 
     .logo {

@@ -47,7 +47,7 @@
         visibility: hidden;
         width: 200px;
         background-color: white;
-        color: black;
+        /* color: black; */
         text-align: left;
         border-radius: 6px;
         padding: 10px;
