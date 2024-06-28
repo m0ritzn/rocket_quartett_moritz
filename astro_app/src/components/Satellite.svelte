@@ -7,10 +7,20 @@
     let top = 100 - (satellite.satalt / maxAltitude) * 100 + "%"; // Inverse because CSS top starts from the top
     let left = Math.random() * 90 + "%"; // Keep random left positioning
 
-    // // Generiere zufällige Positionen
-    // // Generiere zufällige Positionen für die Punkte
-    // let top = Math.random() * 90 + "%"; // Limit to 90% to avoid overflow
-    // let left = Math.random() * 90 + "%"; // Limit to 90% to avoid overflow
+    // Define category classes based on the category ID
+    // let categoryClass;
+    // switch (satellite.category) {
+    //     case "Amateur radio":
+    //         categoryClass = "category-amateur-radio";
+    //         break;
+    //     case "Beidou Navigation System":
+    //         categoryClass = "category-beidou";
+    //         break;
+    //     // Add cases for other categories as needed
+    //     default:
+    //         categoryClass = "category-default";
+    //         break;
+    // }
 </script>
 
 <div class="dot" style="top: {top}; left: {left};">
@@ -33,6 +43,19 @@
         background-color: red;
         border-radius: 50%;
         position: absolute; /* Absolute Positionierung innerhalb des Containers */
+    }
+
+    .category-amateur-radio {
+        background-color: red;
+    }
+
+    .category-beidou {
+        background-color: blue;
+    }
+
+    /* Add styles for other categories as needed */
+    .category-default {
+        background-color: gray;
     }
 
     .tooltip {
