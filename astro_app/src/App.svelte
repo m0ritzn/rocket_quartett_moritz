@@ -4,28 +4,19 @@
   import { satelliteStore } from "./store.js";
   import Satellites from "./components/Satellites.svelte";
   import PlanetWorld from "./components/PlanetWorld.svelte";
-  // import data from "./components/SpaceObjects.svelte";
-  // import satellite from "./components/SpaceObject.svelte";
 
-  // Daten hier aus API Laden
+  // // Daten hier aus API Laden
   $: console.log($satelliteStore);
 </script>
-
-<!-- <SpaceObject {data} /> -->
 
 <main>
   <Navbar />
   <h1>Space Objects</h1>
   <SpaceObjects />
-  <!-- <h2>Satellites</h2> -->
-  <Satellites />
-  <PlanetWorld />
-
-  <!-- <ul>
-    {#each $satelliteStore as satellite}
-      <li>{satellite.satname}</li>
-    {/each}
-  </ul> -->
+  <div class="container">
+    <Satellites />
+    <PlanetWorld />
+  </div>
 </main>
 
 <style>
@@ -35,9 +26,22 @@
   }
   main {
     /* padding: 2em; */
+    display: flex;
+    flex-direction: column;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #1c1c2d;
     color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column; /* Change to column for vertical stacking */
+    height: 100vh; /* Full viewport height */
+  }
+
+  .container > * {
+    flex: 1;
+    overflow: hidden; /* Prevent overflow */
   }
 </style>

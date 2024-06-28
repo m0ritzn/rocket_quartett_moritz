@@ -2,24 +2,16 @@
 <script>
     export let satellite;
 
-    // Generiere zufällige Positionen
-    // Generiere zufällige Positionen für die Punkte
-    let top = Math.random() * 100 + "%";
-    let left = Math.random() * 100 + "%";
+    // Maximum altitude for scaling purposes (you can adjust this based on your data)
+    const maxAltitude = 40000; // example maximum altitude in kilometers
+    let top = 100 - (satellite.satalt / maxAltitude) * 100 + "%"; // Inverse because CSS top starts from the top
+    let left = Math.random() * 90 + "%"; // Keep random left positioning
+
+    // // Generiere zufällige Positionen
+    // // Generiere zufällige Positionen für die Punkte
+    // let top = Math.random() * 90 + "%"; // Limit to 90% to avoid overflow
+    // let left = Math.random() * 90 + "%"; // Limit to 90% to avoid overflow
 </script>
-
-<!-- <div>
-    <h3>{satellite.satname}</h3>
-    <p>satname: {satellite.satname}</p>
-    <p>intDesignator: {satellite.intDesignator}</p>
-    <p>satid: {satellite.satid}</p>
-    <p>Launch Date: {satellite.launchDate}</p>
-    <p>satalt: {satellite.satalt}</p>
-    <p>satlat: {satellite.satlat}</p>
-    <p>satlng: {satellite.satlng}</p>
-</div> -->
-
-<!-- <div class="dot" title={satellite.satname}></div> -->
 
 <div class="dot" style="top: {top}; left: {left};">
     <div class="tooltip">

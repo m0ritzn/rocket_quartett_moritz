@@ -11,7 +11,7 @@ Komponente rendert dann die einzelnen Satelliten als Punkte auf der Karte. -->
 {#if $satelliteStore.length === 0}
     <p>Loading...</p>
 {:else}
-    <div class="container">
+    <div class="satellite-container">
         {#each $satelliteStore as satellite}
             <Satellite {satellite} />
         {/each}
@@ -19,10 +19,12 @@ Komponente rendert dann die einzelnen Satelliten als Punkte auf der Karte. -->
 {/if}
 
 <style>
-    .container {
+    .satellite-container {
         position: relative;
-        width: 100vw; /* Volle Breite des Viewports */
-        height: 100vh; /* Volle Höhe des Viewports */
-        overflow: hidden; /* Verhindert das Scrollen */
+        width: 100%;
+        height: 100%; /* Full container height */
+        /* overflow: auto; Scroll if content overflows */
+        overflow-y: hidden; /* Scroll if content overflows vertically */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 </style>

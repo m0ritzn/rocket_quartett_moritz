@@ -24,13 +24,3 @@
         fetchData();
     });
 </script>
-
-<!-- {#if $satelliteStore.length === 0}
-    <p>Loading...</p>
-{:else}
-    <ul>
-        {#each $satelliteStore as satellite}
-            <li>{satellite.satname}</li>
-        {/each}
-    </ul>
-{/if} -->
