@@ -1,23 +1,26 @@
 <script>
+    import { push } from "svelte-spa-router";
+
+    function navigateTo(path) {
+        push(path);
+    }
 </script>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navigation Bar</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">What's above you?</div>
-            <div class="nav-links">
-                <a class="nav-link" href="#visualisierung">Visualisierung</a>
-                <a class="nav-link" href="#tabelle">Tabelle</a>
-            </div>
-        </nav>
-    </header>
-</body>
+<nav class="navbar">
+    <div class="logo">What's above you?</div>
+    <div class="nav-links">
+        <a
+            class="nav-link"
+            href="javascript:void(0);"
+            on:click={() => navigateTo("/")}>Visualisierung</a
+        >
+        <a
+            class="nav-link"
+            href="javascript:void(0);"
+            on:click={() => navigateTo("/tabelle")}>Tabelle</a
+        >
+    </div>
+</nav>
 
 <style>
     .navbar {
@@ -25,8 +28,6 @@
         justify-content: space-between;
         align-items: center;
         padding: 1em 2em;
-        /* background-color: #1c1c2d; */
-        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     }
 
     .logo {
@@ -44,6 +45,7 @@
         text-decoration: none;
         font-size: 1em;
         transition: color 0.3s;
+        cursor: pointer;
     }
 
     .nav-link:hover {

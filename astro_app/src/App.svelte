@@ -4,24 +4,36 @@
   import { satelliteStore } from "./store.js";
   import Satellites from "./components/Satellites.svelte";
   import PlanetWorld from "./components/PlanetWorld.svelte";
+  import Table from "./components/Table.svelte";
+
+  import Router from "svelte-spa-router";
 
   // // Daten hier aus API Laden
   $: console.log($satelliteStore);
+
+  const routes = {
+    "/": Satellites,
+    "/tabelle": Table,
+  };
 </script>
 
-<main>
+<!-- <main>
   <Navbar />
-  <h1>Space Objects</h1>
   <SpaceObjects />
   <div class="container">
     <Satellites />
     <PlanetWorld />
   </div>
+</main> -->
+
+<main>
+  <Navbar />
+  <Router {routes} />
 </main>
 
 <style>
   :global(*) {
-    background-color: #1c1c2d;
+    /* background-color: transparent; */
     color: white;
   }
   main {
@@ -30,7 +42,10 @@
     flex-direction: column;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1c1c2d;
+    background-image: url("../src/assets/Sternenhimmel\ Francesco\ Ungaro.jpg"); /* Replace with the path to your image */
+    background-size: cover; /* Adjust the background size to cover the entire container */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-position: center; /* Center the background image */
     color: white;
   }
 

@@ -7,20 +7,11 @@
     let top = 100 - (satellite.satalt / maxAltitude) * 100 + "%"; // Inverse because CSS top starts from the top
     let left = Math.random() * 90 + "%"; // Keep random left positioning
 
-    // Define category classes based on the category ID
-    // let categoryClass;
-    // switch (satellite.category) {
-    //     case "Amateur radio":
-    //         categoryClass = "category-amateur-radio";
-    //         break;
-    //     case "Beidou Navigation System":
-    //         categoryClass = "category-beidou";
-    //         break;
-    //     // Add cases for other categories as needed
-    //     default:
-    //         categoryClass = "category-default";
-    //         break;
-    // }
+    // Generate random values for left and top separately for each dot
+    // const randomizePosition = () => {
+    //     top = Math.random() * 100 + "%";
+    //     left = Math.random() * 100 + "%";
+    // };
 </script>
 
 <div class="dot" style="top: {top}; left: {left};">
@@ -38,24 +29,21 @@
 
 <style>
     .dot {
-        height: 10px;
-        width: 10px;
-        background-color: red;
-        border-radius: 50%;
-        position: absolute; /* Absolute Positionierung innerhalb des Containers */
+        height: 50px;
+        width: 50px;
+        background-image: url("../assets/satellite.png");
+        background-size: cover;
+        position: absolute;
+        animation: float 3s infinite ease-in-out alternate;
     }
 
-    .category-amateur-radio {
-        background-color: red;
-    }
-
-    .category-beidou {
-        background-color: blue;
-    }
-
-    /* Add styles for other categories as needed */
-    .category-default {
-        background-color: gray;
+    @keyframes float {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(10px, -10px);
+        }
     }
 
     .tooltip {
