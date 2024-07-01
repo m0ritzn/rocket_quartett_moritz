@@ -54,7 +54,7 @@
     }
 
     .tooltip {
-        /* visibility: hidden; */
+        visibility: hidden;
         display: inline-flexbox;
         justify-content: center;
         align-items: center;

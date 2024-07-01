@@ -7,13 +7,15 @@
   import Table from "./components/Table.svelte";
 
   import Router from "svelte-spa-router";
-  import Visualisierung from "./components/visualisierung.svelte";
+  import Visualisierung from "./components/Visualisierung.svelte";
+  import LandingPage from "./components/LandingPage.svelte";
 
   // // Daten hier aus API Laden
   $: console.log($satelliteStore);
 
   const routes = {
-    "/": Visualisierung,
+    "/": LandingPage,
+    "/visualisierung": Visualisierung,
     "/tabelle": Table,
   };
 </script>

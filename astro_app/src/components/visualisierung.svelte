@@ -2,6 +2,7 @@
     import SpaceObjects from "./SpaceObjects.svelte";
     import Satellites from "./Satellites.svelte";
     import PlanetWorld from "./PlanetWorld.svelte";
+    import Router from "svelte-spa-router";
 </script>
 
 <!-- <SpaceObjects /> -->

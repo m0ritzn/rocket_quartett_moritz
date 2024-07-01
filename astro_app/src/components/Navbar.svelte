@@ -7,12 +7,14 @@
 </script>
 
 <nav class="navbar">
-    <div class="logo">What's above you?</div>
+    <div class="logo">
+        <a href="/" on:click={() => navigateTo("/")}>What's above you?</a>
+    </div>
     <div class="nav-links">
         <a
             class="nav-link"
             href="javascript:void(0);"
-            on:click={() => navigateTo("/")}>Visualisierung</a
+            on:click={() => navigateTo("/visualisierung")}>Visualisierung</a
         >
         <a
             class="nav-link"
@@ -27,12 +29,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1em 2em;
+        padding: 2.5em 3em;
     }
 
-    .logo {
-        font-size: 1.5em;
+    .logo a {
+        font-size: 42px; /* Einheit px hinzugefügt */
         font-weight: bold;
+        color: white; /* Textfarbe hinzugefügt */
+        text-decoration: none; /* Entfernt die Unterstreichung */
+        transition: color 0.3s;
+        cursor: pointer;
     }
 
     .nav-links {
@@ -48,7 +54,8 @@
         cursor: pointer;
     }
 
-    .nav-link:hover {
+    .nav-link:hover,
+    .logo a:hover {
         color: #ffcc00;
     }
 </style>
