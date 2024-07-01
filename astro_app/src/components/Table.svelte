@@ -1,5 +1,52 @@
 <script>
     import { satelliteStore } from "../store.js";
+    import { writable, get } from "svelte/store";
+
+    let sortedSatellites = writable([]);
+    let sortKey = writable("");
+    let sortDirection = writable("asc");
+
+    function sortSatellites() {
+        const key = get(sortKey);
+        const direction = get(sortDirection);
+        const satellites = get(satelliteStore);
+
+        if (!key) {
+            sortedSatellites.set(satellites);
+            return;
+        }
+
+        sortedSatellites.set(
+            [...satellites].sort((a, b) => {
+                let aKey = a[key];
+                let bKey = b[key];
+                if (typeof aKey === "string") aKey = aKey.toLowerCase();
+                if (typeof bKey === "string") bKey = bKey.toLowerCase();
+
+                if (aKey < bKey) return direction === "asc" ? -1 : 1;
+                if (aKey > bKey) return direction === "asc" ? 1 : -1;
+                return 0;
+            }),
+        );
+    }
+
+    function handleSort(key) {
+        if (get(sortKey) === key) {
+            sortDirection.update((direction) =>
+                direction === "asc" ? "desc" : "asc",
+            );
+        } else {
+            sortKey.set(key);
+            sortDirection.set("asc");
+        }
+        sortSatellites();
+    }
+
+    $: {
+        if (get(satelliteStore).length > 0) {
+            sortSatellites();
+        }
+    }
 </script>
 
 {#if $satelliteStore.length === 0}
@@ -8,17 +55,19 @@
     <table>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Int. Designator</th>
-                <th>ID</th>
-                <th>Launch Date</th>
-                <th>Altitude</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
+                <th on:click={() => handleSort("satname")}>Name</th>
+                <th on:click={() => handleSort("intDesignator")}
+                    >Int. Designator</th
+                >
+                <th on:click={() => handleSort("satid")}>ID</th>
+                <th on:click={() => handleSort("launchDate")}>Launch Date</th>
+                <th on:click={() => handleSort("satalt")}>Altitude</th>
+                <th on:click={() => handleSort("satlat")}>Latitude</th>
+                <th on:click={() => handleSort("satlng")}>Longitude</th>
             </tr>
         </thead>
         <tbody>
-            {#each $satelliteStore as satellite}
+            {#each $sortedSatellites as satellite}
                 <tr>
                     <td>{satellite.satname}</td>
                     <td>{satellite.intDesignator}</td>
@@ -46,5 +95,6 @@
     }
     th {
         background-color: #333;
+        cursor: pointer;
     }
 </style>

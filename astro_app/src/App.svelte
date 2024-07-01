@@ -26,9 +26,15 @@
   </div>
 </main> -->
 
+<!-- alles in rouer verlagern -->
 <main>
   <Navbar />
   <Router {routes} />
+  <SpaceObjects />
+  <div class="container">
+    <Satellites />
+    <PlanetWorld />
+  </div>
 </main>
 
 <style>
