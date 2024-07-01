@@ -1,0 +1,24 @@
+<script>
+    import SpaceObjects from "./SpaceObjects.svelte";
+    import Satellites from "./Satellites.svelte";
+    import PlanetWorld from "./PlanetWorld.svelte";
+</script>
+
+<!-- <SpaceObjects /> -->
+<div class="visualisation">
+    <Satellites />
+    <PlanetWorld />
+</div>
+
+<style>
+    .visualisation {
+        display: flex;
+        flex-direction: column; /* Change to column for vertical stacking */
+        height: 100vh; /* Full viewport height */
+    }
+
+    .visualisation > * {
+        flex: 1;
+        overflow: hidden; /* Prevent overflow */
+    }
+</style>

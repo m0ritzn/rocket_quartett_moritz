@@ -7,40 +7,28 @@
   import Table from "./components/Table.svelte";
 
   import Router from "svelte-spa-router";
+  import Visualisierung from "./components/visualisierung.svelte";
 
   // // Daten hier aus API Laden
   $: console.log($satelliteStore);
 
   const routes = {
-    "/": Satellites,
+    "/": Visualisierung,
     "/tabelle": Table,
   };
 </script>
 
-<!-- <main>
-  <Navbar />
-  <SpaceObjects />
-  <div class="container">
-    <Satellites />
-    <PlanetWorld />
-  </div>
-</main> -->
-
 <!-- alles in rouer verlagern -->
+<SpaceObjects />
 <main>
   <Navbar />
   <Router {routes} />
-  <SpaceObjects />
-  <div class="container">
-    <Satellites />
-    <PlanetWorld />
-  </div>
 </main>
 
 <style>
   :global(*) {
     /* background-color: transparent; */
-    color: white;
+    /* color: white; */
   }
   main {
     /* padding: 2em; */
@@ -53,15 +41,16 @@
     background-repeat: no-repeat; /* Prevent the background from repeating */
     background-position: center; /* Center the background image */
     color: white;
+    height: 100vh;
   }
 
-  .container {
+  .visualisation {
     display: flex;
     flex-direction: column; /* Change to column for vertical stacking */
     height: 100vh; /* Full viewport height */
   }
 
-  .container > * {
+  .visualisation > * {
     flex: 1;
     overflow: hidden; /* Prevent overflow */
   }
