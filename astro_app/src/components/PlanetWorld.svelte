@@ -24,6 +24,6 @@
         background-image: url("../assets/erde.png");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: top;
     }
 </style>
