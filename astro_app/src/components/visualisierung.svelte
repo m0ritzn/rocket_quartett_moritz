@@ -15,7 +15,7 @@
     .visualisation {
         display: flex;
         flex-direction: column; /* Change to column for vertical stacking */
-        height: 100vh; /* Full viewport height */
+        height: 100%; /* Full viewport height */
     }
 
     .visualisation > * {

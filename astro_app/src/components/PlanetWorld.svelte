@@ -9,8 +9,11 @@
     .planet-container {
         position: relative;
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
+        /* height: 25vh; */
+        height: 30%;
         overflow: hidden;
+        /* padding-top: 100px; */
     }
 
     .earth {

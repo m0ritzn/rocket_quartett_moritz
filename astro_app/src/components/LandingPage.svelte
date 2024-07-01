@@ -47,7 +47,7 @@
         padding: 1em 2em;
         font-size: 1.25em;
         color: white;
-        background-color: #007bff;
+        background-color: #ffcc00;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -55,6 +55,6 @@
     }
 
     .start-button:hover {
-        background-color: #0056b3;
+        background-color: #deb100;
     }
 </style>

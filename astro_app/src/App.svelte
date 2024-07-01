@@ -43,17 +43,6 @@
     background-repeat: no-repeat; /* Prevent the background from repeating */
     background-position: center; /* Center the background image */
     color: white;
-    height: 100vh;
-  }
-
-  .visualisation {
-    display: flex;
-    flex-direction: column; /* Change to column for vertical stacking */
     height: 100vh; /* Full viewport height */
-  }
-
-  .visualisation > * {
-    flex: 1;
-    overflow: hidden; /* Prevent overflow */
   }
 </style>

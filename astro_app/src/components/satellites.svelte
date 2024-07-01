@@ -1,7 +1,3 @@
-<!-- Hier werden die Daten aus dem Store, den ich noch anlegen muss, in einzelne
-Satelliten unterteils und an die SpaceObject-Komponente weitergegeben. Diese
-Komponente rendert dann die einzelnen Satelliten als Punkte auf der Karte. -->
-
 <!-- Satellites.svelte -->
 <script>
     import { satelliteStore } from "../store.js";
@@ -17,14 +13,35 @@ Komponente rendert dann die einzelnen Satelliten als Punkte auf der Karte. -->
         {/each}
     </div>
 {/if}
+<!-- <style>
+        .satellite-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            /* overflow: auto; Scroll if content overflows */
+            overflow-y: hidden; /* Scroll if content overflows vertically */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+    </style> -->
+
+<!-- <style>
+        .satellite-container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden; /* Allow vertical scrolling if content overflows */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+    </style> -->
 
 <style>
     .satellite-container {
-        position: relative;
+        position: relative; /* Ensures that child elements with absolute positioning are positioned relative to this container */
         width: 100%;
-        height: 100%; /* Full container height */
-        /* overflow: auto; Scroll if content overflows */
-        overflow-y: hidden; /* Scroll if content overflows vertically */
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        height: 100%; /* Ensures the container is as tall as the viewport */
+        overflow: hidden; /* Prevent any scrolling */
+        padding-bottom: 200sx; /* Add padding to the container */
     }
 </style>
