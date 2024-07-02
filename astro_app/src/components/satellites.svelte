@@ -13,6 +13,7 @@
         {/each}
     </div>
 {/if}
+
 <!-- <style>
         .satellite-container {
             position: relative;
@@ -39,9 +40,9 @@
 <style>
     .satellite-container {
         position: relative; /* Ensures that child elements with absolute positioning are positioned relative to this container */
+        z-index: 2000;
         width: 100%;
         height: 100%; /* Ensures the container is as tall as the viewport */
-        overflow: hidden; /* Prevent any scrolling */
-        padding-bottom: 200sx; /* Add padding to the container */
+        /* padding-bottom: 200px; Add padding to the container */
     }
 </style>

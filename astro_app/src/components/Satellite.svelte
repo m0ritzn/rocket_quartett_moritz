@@ -2,7 +2,7 @@
     export let satellite;
 
     // Maximum altitude for scaling purposes (you can adjust this based on your data)
-    const maxAltitude = 40000; // example maximum altitude in kilometers
+    const maxAltitude = 35000; // example maximum altitude in kilometers
     let top = 100 - (satellite.satalt / maxAltitude) * 100 + "%"; // Inverse because CSS top starts from the top
     let left = Math.random() * 90 + "%"; // Keep random left positioning
 </script>
@@ -27,27 +27,6 @@
     </div>
 </div>
 
-<!-- /* .tooltip {
-
-    display: inline-flexbox;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 200px;
-    color: black !important;
-    background-color: white;
-    text-align: left;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
- left: 50%;
-    margin-left: -100px;
-    opacity: 0;
-    transition: opacity 0.3s;
-} */ -->
-
 <style>
     .dot {
         height: 50px;
@@ -56,6 +35,9 @@
         background-size: cover;
         position: absolute;
         animation: float 3s infinite ease-in-out alternate;
+        z-index: 1;
+        transition: all 0.25s ease;
+        cursor: pointer;
     }
 
     @keyframes float {
@@ -80,7 +62,9 @@
         box-shadow: 0px 0px 10px rgb(255, 255, 255);
         width: 200px;
         position: absolute; /* Position tooltip relative to .dot */
-        z-index: 1;
+        transition: transform all 0.3s ease;
+        bottom: 100%;
+        z-index: 2000; /* Ensure tooltip is on top of other elements */
     }
 
     .info-group {
@@ -103,7 +87,10 @@
         display: flex;
         justify-content: space-between;
     }
-
+    .dot:hover {
+        width: 60px;
+        height: 60px;
+    }
     .dot:hover .tooltip {
         visibility: visible;
         opacity: 1;

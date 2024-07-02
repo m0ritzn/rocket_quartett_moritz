@@ -20,6 +20,6 @@
 
     .visualisation > * {
         flex: 1;
-        overflow: hidden; /* Prevent overflow */
+        position: relative;
     }
 </style>

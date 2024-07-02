@@ -12,7 +12,7 @@
         /* height: 100%; */
         /* height: 25vh; */
         height: 30%;
-        overflow: hidden;
+        z-index: 1;
         /* padding-top: 100px; */
     }
 
@@ -28,5 +28,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
+        z-index: 0;
     }
 </style>

@@ -43,9 +43,9 @@
     }
 
     // Automatically sort and update the table whenever satelliteStore changes
-    $: {
-        sortSatellites(get(satelliteStore));
-    }
+    // $: {
+    //     sortSatellites(get(satelliteStore));
+    // }
 
     $: {
         if (get(satelliteStore).length > 0) {
